@@ -1,0 +1,11 @@
+--Product таблица продуктов
+--Categories таблица категорий
+-- ProductsCategories таблица для связи много-ко-многим
+-- ProductsCategories.product ProductsCategories.category поля соотвествующих внешних ключей
+
+SELECT Products.name, Categories.name
+ FROM Products
+JOIN ProductsCategories
+ ON ProductsCategories.product = Products.id
+JOIN Categories
+ ON Categories.id = ProductsCategories.category
